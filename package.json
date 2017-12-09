@@ -1,0 +1,27 @@
+{
+  "name": "restaurant-pos-front-end",
+  "version": "4.1.0",
+  "private": true,
+  "homepage": "https://github.com/jayzamazing/restaurant-pos-front-end#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayzamazing/restaurant-pos-front-end.git"
+  },
+  "author": "Adrian J Lopez <adrianjaylopez@gmail.com>",
+  "contributors": [],
+  "bugs": {
+    "url": "https://github.com/jayzamazing/restaurant-pos-front-end/issues"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.0.17"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
