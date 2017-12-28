@@ -1,0 +1,11 @@
+language: node_js
+node_js: node
+before_script:
+- npm run postinstall
+deploy:
+  provider: heroku
+  api_key:
+    secure: YWB4p98TAfqlfm5Bpzh1ANsXuvXh7YeaHT9ZMtRdWr8I8NJGh7dk0ncGkN1NK0in8zarW6+dzRCDdbW4qQgEGaVtoBikZ7Zy2xDwIITZplY6nlBxzlL7VgncWOLK7P2mDNkbBeJGNa6A26u0KagHXfr56Q7CoN/xRKcRyqmnAFb540XtUCEmplCTqaLydjstsDtwdzNF720LeZ+kzmDpx0IqxTStG8RCkPg1WaNENP7q/ruqAmKqfzQoLnEXege/E114k6TJpFuOQEyowA9R5yXAK6yuBiFf2wfGQcA4yFw4TDX6o7X0iVIrRcfzXcKY12ZWRocfFmmboZ5EvPf3gTPoW3Qx0lWhp2zNzJqXZW0HTcRu9GbZppDqr4hyo0slzkranqxY+Cig0WEuiIfQ8O8xPtKpYWkoCR6GC25QEohO+FPuO+ynMJhQQ/x7U94A+wfMeBH10TjmrSRKgG+l7HkGwZqCaBTT2PRYrZEC3oqD8nprV+JdUlNffNLWWUcL5WHGNfrIHlNxkZVOAgCzNDDKNQqCDCTeRCJO5dUBUI75749zv1/lvVJkuN8h9N7e1h82qcU6J1ovkVuKWrtyjlRKc1Yd/X47kJZcjjtudK+nGE78ra6N2gYNNiMe/tOKlhtYdYtW81yo36gwHI21iBLepXoLxoDQLJPbUu2FxNY=
+  app: restaurant-pos-front-end
+  on:
+    repo: jayzamazing/restaurant-pos-back-end
