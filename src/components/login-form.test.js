@@ -20,7 +20,7 @@ describe('login-form', () => {
   it('login button click', () => {
     const handleSubmit = jest.fn();
     const wrapper = shallow(<LoginForm handleSubmit={handleSubmit}/>);
-    wrapper.find('[name="email"]').at(0).simulate('change', { target: { value: 'test@test.com' } });
+    wrapper.find('[name="username"]').at(0).simulate('change', { target: { value: 'test@test.com' } });
     wrapper.find('[name="password"]').at(0).simulate('change', { target: { value: 'somereallylongpassword2343' } });
     wrapper.find('.log-in').simulate('submit');
     expect(handleSubmit).toHaveBeenCalled();

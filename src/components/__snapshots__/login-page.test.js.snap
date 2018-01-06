@@ -3,7 +3,7 @@
 exports[`home-page redirect snapshow 1`] = `
 <Redirect
   push={false}
-  to="/boards"
+  to="/tables"
 />
 `;
 
@@ -18,18 +18,9 @@ exports[`home-page snapshot 1`] = `
       className="col-centered login-area"
     >
       <h2>
-        Log in to Trello
+        Log in
       </h2>
       <ReduxForm />
-      <p>
-        Don't have an account? 
-        <Link
-          replace={false}
-          to="/register"
-        >
-          Create a Trello Account.
-        </Link>
-      </p>
     </div>
   </div>
 </div>

@@ -18,11 +18,11 @@ export class LoginForm extends React.Component {
             <form className="login-form" onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}>
                 {error}
                 <Field
-                  label="Email (or username)"
+                  label="username"
                   component={Input}
                   type="text"
-                  name="email"
-                  id="email"
+                  name="username"
+                  id="username"
                   validate={[required, nonEmpty]} inputClass="input-field form-control"/>
                 <Field
                   label="Password"

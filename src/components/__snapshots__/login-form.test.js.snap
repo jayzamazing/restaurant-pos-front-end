@@ -6,10 +6,10 @@ exports[`login-form snapshot 1`] = `
 >
   <Field
     component={[Function]}
-    id="email"
+    id="username"
     inputClass="input-field form-control"
-    label="Email (or username)"
-    name="email"
+    label="username"
+    name="username"
     type="text"
     validate={
       Array [

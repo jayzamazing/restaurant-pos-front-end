@@ -6,16 +6,15 @@ import LoginForm from './login-form';
 export function LoginPage(props) {
     // If we are logged in redirect straight to the user's dashboard
     if (props.loggedIn) {
-        return <Redirect to="/boards" />;
+        return <Redirect to="/tables" />;
     }
 
     return (
         <div className="login container">
             <div className="row">
               <div className="col-centered login-area">
-                <h2>Log in to Trello</h2>
+                <h2>Log in</h2>
                 <LoginForm />
-                <p>Don't have an account? <Link to="/register">Create a Trello Account.</Link></p>
               </div>
             </div>
         </div>
