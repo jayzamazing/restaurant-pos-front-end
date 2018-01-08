@@ -1,28 +1,26 @@
 'use strict';
 import React from 'react';
-import Input from './input';
+import DropDown from './dropDown';
 import {shallow} from 'enzyme';
 
 describe('checkbox', () => {
-  let meta, input, label;
+  let meta, input, label, stores;
   beforeEach(() => {
     input = {
       name: 'storeId'
     };
+    stores = [100, 101, 102, 103];
     label = 'Choose a store.';
     meta = {touched: false}
   });
   afterEach(() => {
     input = {};
+    stores = [];
     label = '';
     meta = {};
   });
   it('renders without problems', () => {
-    input = {
-      name: 'acceptTerms'
-    }
-    label = 'I accept the Terms of Service';
-    meta = {touched: false}
-    shallow(<Input meta={meta} input={input} label={label}/>);
+    shallow(<DropDown meta={meta} input={input} label={label}
+      stores={stores}/>);
   });
 });
