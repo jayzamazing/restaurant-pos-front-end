@@ -20,7 +20,7 @@ exports[`home-page snapshot 1`] = `
       <h2>
         Log in
       </h2>
-      <ReduxForm />
+      <Connect(ReduxForm) />
     </div>
   </div>
 </div>

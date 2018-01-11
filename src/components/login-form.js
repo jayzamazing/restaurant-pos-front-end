@@ -3,6 +3,7 @@ import {Field, reduxForm} from 'redux-form';
 import Input from './input';
 import {login} from '../actions/auth';
 import {required, nonEmpty} from '../validators';
+import {connect} from 'react-redux';
 
 export class LoginForm extends React.Component {
     render() {
@@ -35,10 +36,6 @@ export class LoginForm extends React.Component {
     }
 }
 
-const mapStateToProps = (state, props) => ({
-  initialValues: state.stores
-});
-
 const mapDispatchToProps = (dispatch) => ({
   //dispatch to authenticate the user
   login: (email, password, store) => {
@@ -47,4 +44,4 @@ const mapDispatchToProps = (dispatch) => ({
     );
   }
 });
-export default reduxForm({form: 'login'})(LoginForm);
+export default connect(null, mapDispatchToProps)(reduxForm({form: 'login'})(LoginForm));
