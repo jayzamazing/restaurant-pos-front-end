@@ -5,17 +5,14 @@ import {login} from '../actions/auth';
 import {required, nonEmpty} from '../validators';
 
 export class LoginForm extends React.Component {
-    onSubmit(values) {
-        return this.props.dispatch(login(values.email, values.password));
-    }
-
     render() {
         let error;
         if (this.props.error) {
             error = <div className="form-error">{this.props.error}</div>;
         }
         return (
-            <form className="login-form" onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}>
+            <form className="login-form" onSubmit={this.props.handleSubmit(values =>
+                  this.props.login(values.email, values.password, values.store))}>
                 {error}
                 <Field
                   label="username"
@@ -38,4 +35,16 @@ export class LoginForm extends React.Component {
     }
 }
 
+const mapStateToProps = (state, props) => ({
+  initialValues: state.stores
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  //dispatch to authenticate the user
+  login: (email, password, store) => {
+    dispatch(
+      login(email, password, store)
+    );
+  }
+});
 export default reduxForm({form: 'login'})(LoginForm);
