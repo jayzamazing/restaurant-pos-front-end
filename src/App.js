@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {Route, withRouter} from 'react-router-dom';
 import Login from './components/login-page';
 import {refreshAuthToken} from './actions/auth';
+import HeaderBar from './components/header-bar';
 import logo from './logo.svg';
 import './App.css';
 
@@ -42,7 +43,8 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
-        <Route exact path="/login" component={Login} />
+        <HeaderBar />
+        <Route exact path="/" component={Login} />
       </div>
     );
   }
