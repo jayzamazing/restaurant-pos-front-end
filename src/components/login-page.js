@@ -11,9 +11,10 @@ export function LoginPage(props) {
 
     return (
         <div className="login container">
-            <div className="row">
-              <div className="col-centered login-area">
-                <h2>Log in</h2>
+          <div className="row">
+            <div className="col-centered login-area">
+              <h3>Welcome to Restaurant POS.</h3>
+              <p>Please use the following credentials in order to login.</p>
                 <LoginForm />
               </div>
             </div>
