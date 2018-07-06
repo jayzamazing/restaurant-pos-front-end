@@ -1,13 +1,12 @@
 import React from 'react';
-import logo from './img/restaurant_banner.jpg';
+import './header-bar.css'
 
 export class HeaderBar extends React.Component {
   render() {
     return (
-      <header>
-        <nav>
-          <img src={logo} alt="logo"/>
-        </nav>
+      <header className="container-fluid">
+        <div className="jumbotron">
+        </div>
       </header>
     );
   }
