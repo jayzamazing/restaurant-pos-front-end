@@ -6,6 +6,13 @@ import {required, nonEmpty} from '../validators';
 import {connect} from 'react-redux';
 
 export class LoginForm extends React.Component {
+    componentWillMount() {
+      //deal with setting the initial values for the fields
+      this.props.initialize({
+        username: 'jack',
+        password: 'ifts(8@3re)$'
+      });
+    }
     render() {
         let error;
         if (this.props.error) {
@@ -16,7 +23,7 @@ export class LoginForm extends React.Component {
                   this.props.login(values.email, values.password, values.store))}>
                 {error}
                 <Field
-                  label="username"
+                  label="Username"
                   component={Input}
                   type="text"
                   name="username"
