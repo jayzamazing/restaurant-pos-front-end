@@ -17,9 +17,12 @@ exports[`home-page snapshot 1`] = `
     <div
       className="col-centered login-area"
     >
-      <h2>
-        Log in
-      </h2>
+      <h3>
+        Welcome to Restaurant POS.
+      </h3>
+      <p>
+        Please use the following credentials in order to login.
+      </p>
       <Connect(ReduxForm) />
     </div>
   </div>

@@ -8,18 +8,21 @@ describe('login-form', () => {
   //ensure that it renders without issues
   it('should render', () => {
     const handleSubmit = jest.fn();
-    shallow(<LoginForm handleSubmit={handleSubmit}/>);
+    const initialize = jest.fn();
+    shallow(<LoginForm handleSubmit={handleSubmit} initialize={initialize}/>);
   });
   //take snapshot for future changes
   it('snapshot', () => {
     const handleSubmit = jest.fn();
-    const wrapper = shallow(<LoginForm handleSubmit={handleSubmit}/>);
+    const initialize = jest.fn();
+    const wrapper = shallow(<LoginForm handleSubmit={handleSubmit} initialize={initialize}/>);
     expect(toJson(wrapper)).toMatchSnapshot();
   });
   //click on login button and check dispatches
   it('login button click', () => {
     const handleSubmit = jest.fn();
-    const wrapper = shallow(<LoginForm handleSubmit={handleSubmit}/>);
+    const initialize = jest.fn();
+    const wrapper = shallow(<LoginForm handleSubmit={handleSubmit} initialize={initialize}/>);
     wrapper.find('[name="username"]').at(0).simulate('change', { target: { value: 'test@test.com' } });
     wrapper.find('[name="password"]').at(0).simulate('change', { target: { value: 'somereallylongpassword2343' } });
     wrapper.find('.log-in').simulate('submit');
