@@ -6,6 +6,7 @@ export class HeaderBar extends React.Component {
     return (
       <header className="container-fluid">
         <div className="jumbotron">
+          <h1>Restaurant POS</h1>
         </div>
       </header>
     );

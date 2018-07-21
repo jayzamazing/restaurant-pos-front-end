@@ -10,3 +10,7 @@
     text-shadow: 2px 2px #216224;
     font-family: 'Roboto', sans-serif;
 }
+/* align jumbotron title to the left */
+.jumbotron h1{
+  text-align: left;
+}
