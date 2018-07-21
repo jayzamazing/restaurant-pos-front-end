@@ -20,7 +20,7 @@ export class LoginForm extends React.Component {
             error = <div className="form-error">{this.props.error}</div>;
         }
         return (
-            <form className="login-form col-xs-12 col-sm-8 col-md-8 col-md-8 center_div ng-pristine ng-valid" onSubmit={this.props.handleSubmit(values =>
+            <form className="col-centered login-form col-xs-12 col-sm-8 col-md-8 col-md-8 center_div ng-pristine ng-valid" onSubmit={this.props.handleSubmit(values =>
                   this.props.login(values.email, values.password, values.store))}>
                 {error}
                 <Field
