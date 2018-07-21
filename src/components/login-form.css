@@ -1,3 +1,10 @@
 .login-form {
   text-align: left;
 }
+.login-form input {
+  margin-bottom: 1rem;
+}
+.log-in {
+  margin: 0 auto;
+  display: block;
+}
