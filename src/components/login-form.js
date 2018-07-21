@@ -21,7 +21,7 @@ export class LoginForm extends React.Component {
         }
         return (
             <form className="col-centered login-form col-xs-12 col-sm-8 col-md-8 col-md-8 center_div ng-pristine ng-valid" onSubmit={this.props.handleSubmit(values =>
-                  this.props.login(values.email, values.password, values.store))}>
+                  this.props.login(values.username, values.password, values.store))}>
                 {error}
                 <Field
                   label="username"
@@ -48,9 +48,9 @@ export class LoginForm extends React.Component {
 
 const mapDispatchToProps = (dispatch) => ({
   //dispatch to authenticate the user
-  login: (email, password, store) => {
+  login: (email, password) => {
     dispatch(
-      login(email, password, store)
+      login(email, password)
     );
   }
 });
