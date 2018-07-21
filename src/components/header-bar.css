@@ -13,4 +13,8 @@
 /* align jumbotron title to the left */
 .jumbotron h1{
   text-align: left;
+  float: left;
+}
+.logout-btn {
+  float: right;
 }
