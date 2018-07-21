@@ -43,7 +43,7 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
-        <HeaderBar />
+        <HeaderBar location={this.props.location} />
         <Route exact path="/" component={Login} />
       </div>
     );
