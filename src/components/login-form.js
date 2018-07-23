@@ -1,3 +1,4 @@
+'use strict';
 import React from 'react';
 import {Field, reduxForm} from 'redux-form';
 import Input from './input';
