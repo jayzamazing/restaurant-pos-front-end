@@ -7,8 +7,8 @@ exports[`table snapshot 1`] = `
   <figure>
     <img
       alt="round table pic"
-      class="img-responsive"
-      src="../img/brown4persontable.png"
+      className="img-thumbnail tableImg"
+      src="brown6persontable.png"
     />
     <figcaption
       className="one-digit"
