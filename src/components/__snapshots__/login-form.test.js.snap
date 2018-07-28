@@ -2,14 +2,15 @@
 
 exports[`login-form snapshot 1`] = `
 <form
-  className="login-form"
+  className="col-centered login-form col-xs-12 col-sm-8 col-md-8 col-md-8 center_div ng-pristine ng-valid"
 >
   <Field
     component={[Function]}
     id="username"
     inputClass="input-field form-control"
-    label="Username"
+    label="username"
     name="username"
+    placeholder="Please enter your username"
     type="text"
     validate={
       Array [
@@ -22,8 +23,9 @@ exports[`login-form snapshot 1`] = `
     component={[Function]}
     id="password"
     inputClass="input-field form-control"
-    label="Password"
+    label="password"
     name="password"
+    placeholder="Please enter your password"
     type="password"
     validate={
       Array [
