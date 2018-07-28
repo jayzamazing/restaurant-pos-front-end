@@ -4,7 +4,8 @@ import {Route, withRouter} from 'react-router-dom';
 import Login from './components/login-page';
 import {refreshAuthToken} from './actions/auth';
 import HeaderBar from './components/header-bar';
-import logo from './logo.svg';
+import Tables from './components/tables/tables';
+
 import './App.css';
 
 export class App extends Component {
@@ -45,6 +46,7 @@ export class App extends Component {
       <div className="App">
         <HeaderBar location={this.props.location} />
         <Route exact path="/" component={Login} />
+        <Route exact path="/tables" component={Tables} />
       </div>
     );
   }
