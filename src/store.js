@@ -3,12 +3,14 @@ import thunk from 'redux-thunk';
 import {loadAuthToken} from './local-storage';
 import {setAuthToken} from './actions/auth';
 import authReducer from './reducers/auth';
+import tableReducer from './reducers/table';
 import {reducer as formReducer} from 'redux-form';
 
 const store = createStore(
   combineReducers({
     auth: authReducer,
-    form: formReducer
+    form: formReducer,
+    table: tableReducer
   }),
   applyMiddleware(thunk)
 );
