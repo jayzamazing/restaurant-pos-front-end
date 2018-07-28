@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import './header-bar.css';
 import {setCurrentUser, setAuthToken} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
-import {Link} from 'react-router-dom';
 
 export class HeaderBar extends React.Component {
   //logout user and invalidate session
@@ -13,7 +12,6 @@ export class HeaderBar extends React.Component {
       clearAuthToken();
   }
   render() {
-    console.log(this.props.loggedIn)
     let logout;
     if (this.props.loggedIn) {
       logout = (
