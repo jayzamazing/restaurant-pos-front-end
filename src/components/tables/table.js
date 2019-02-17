@@ -14,10 +14,11 @@ export class Table extends React.Component {
     }
   }
   tableImg = function(table) {
-    if (table === 'table_4')
+    if (table === 'table_4') {
       return table_4;
-    else
-      return table_6
+    } else {
+        return table_6;
+    }
   }
   render () {
     const {connectDragSource, src } = this.props
@@ -36,7 +37,9 @@ const tableSource = {
     return {};
   },
   endDrag(props) {
-     console.log('end drag');
+     if (props.position) {
+       props.removeTablePosition(props.position.x, props.position.y);
+     }
     return {};
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Table from './table.js';
 import TableSection from './table-section.js';
-import {setTablePosition} from '../../actions/table';
+import {setTablePosition, removeTablePosition} from '../../actions/table';
 import {DragDropContext} from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 import PropTypes from 'prop-types';
@@ -59,16 +59,20 @@ export class Tables extends React.Component {
 }
 //allows subcription to redux updates and access to data stored in redux store
 const mapStateToProps = state => ({
-  position: state.table.position
+  table: state.table
 });
 const mapDispatchToProps = (dispatch, props) => ({
   setTablePosition: (tableNumber, x, y) => {
     dispatch(setTablePosition(tableNumber, x, y));
+  },
+  removeTablePosition: (x, y) => {
+    dispatch(removeTablePosition(x, y));
   }
 });
 Tables.propTypes = {
   position: PropTypes.objectOf(PropTypes.number),
-  setTablePosition: PropTypes.func
+  setTablePosition: PropTypes.func,
+  removeTablePosition: PropTypes.func
 };
 Tables = DragDropContext(HTML5Backend)(Tables);
 Tables = connect(mapStateToProps, mapDispatchToProps)(Tables);
