@@ -10,19 +10,21 @@ import './tables.css';
 
 export class Tables extends React.Component {
   canMove = (x, y) => {
-    // const {propx, propy} = this.props.position;
-    //TODO temporary, will replace with logic later
+    if (this.props.table[x] && this.props.table[x][y] && this.props.table[x][y].hasOwnProperty('tableNumber')) {
+      return false;
+    }
     return true;
   }
   moveTable = (x, y) => {
-    if (!this.canMove(x, y))
+    if (!this.canMove(x, y)) {
       return false;
-    this.props.setTablePosition(x, y);
+    }
+    this.props.setTablePosition('?', x, y);
   }
   renderTable = (x, y) => {
-    const {tx, ty} = this.props.position;
-    if (x === tx && y === ty) {
-      return <Table/>
+    if (this.props.table[x] && this.props.table[x][y] && this.props.table[x][y].hasOwnProperty('tableNumber')) {
+      return <Table src="table_6" alt="round table pic" position={{x, y}}
+      figClass="one-digit" figNumber="1" removeTablePosition={this.props.removeTablePosition} />
     }
   }
   renderTableSection = (i) => {
@@ -44,7 +46,7 @@ export class Tables extends React.Component {
       <section className="container">
         <div className="row">
           <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 table-grid">
-            <Table src="../img/brown4persontable.png" alt="round table pic"
+            <Table src="table_6" alt="round table pic"
             figClass="one-digit" figNumber="1" />
           </div>
         </div>
@@ -60,8 +62,8 @@ const mapStateToProps = state => ({
   position: state.table.position
 });
 const mapDispatchToProps = (dispatch, props) => ({
-  setTablePosition: (x, y) => {
-    dispatch(setTablePosition(x, y));
+  setTablePosition: (tableNumber, x, y) => {
+    dispatch(setTablePosition(tableNumber, x, y));
   }
 });
 Tables.propTypes = {
