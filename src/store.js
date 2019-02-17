@@ -5,14 +5,16 @@ import {setAuthToken} from './actions/auth';
 import authReducer from './reducers/auth';
 import tableReducer from './reducers/table';
 import {reducer as formReducer} from 'redux-form';
+import { createLogger } from 'redux-logger';
 
+const logger = createLogger();
 const store = createStore(
   combineReducers({
     auth: authReducer,
     form: formReducer,
     table: tableReducer
   }),
-  applyMiddleware(thunk)
+  applyMiddleware(thunk, logger)
 );
 
 //hydrate the authToken from localStorage if it exist
