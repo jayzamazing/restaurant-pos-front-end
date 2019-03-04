@@ -4,6 +4,18 @@ This project is a mock restaurant pos system.
 
 ![image](<./github/Screenshot.png>)
 
+###How to run
+This project can either be run using the following commands:
+> For production
+
+1. docker-compose -f production.yml -f docker-compose.yml build
+2. docker-compose -f production.yml -f docker-compose.yml up -d
+
+> For Testing
+
+1. docker-compose -f test.yml -f docker-compose.yml build
+2. docker-compose -f test.yml -f docker-compose.yml up
+
 ###Background
 I built this application to emulate a point of sale business application. This application would be similar to a POS system used by servers at a restaurant but available for use on any device with access to the web.
 
@@ -30,3 +42,4 @@ This is v4.1.0 of the app. Future enhancements can be seen below:
 * Expire users login after 15 minutes.
 * Table order section will allow modification of order and splitting of table.
 * Add error page for failed authentication.
+* Add manager portal to add / remove / reorganize tables.
