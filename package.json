@@ -34,8 +34,10 @@
     "eject": "react-scripts eject",
     "compose-build-prod": "docker-compose -f docker-compose.yml -f production.yml build web",
     "compose-run-prod": "docker-compose -f docker-compose.yml -f production.yml up web",
+    "compose-kill-prod": "docker-compose -f docker-compose.yml -f production.yml down",
     "compose-build-test": "docker-compose -f docker-compose.yml -f test.yml build web",
-    "compose-run-test": "docker-compose -f docker-compose.yml -f test.yml up web"
+    "compose-run-test": "docker-compose -f docker-compose.yml -f test.yml up web",
+    "compose-kill-test": "docker-compose -f docker-compose.yml -f test.yml down"
   },
   "devDependencies": {
     "enzyme": "^3.9.0",
