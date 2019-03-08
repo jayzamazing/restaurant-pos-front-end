@@ -8,13 +8,26 @@ This project is a mock restaurant pos system.
 This project can either be run using the following commands:
 > For production
 
+1. npm run compose-build-prod
+2. npm run compose-run-prod
+
+>If you need to run in manually
 1. docker-compose -f production.yml -f docker-compose.yml build
-2. docker-compose -f production.yml -f docker-compose.yml up -d
+2. docker-compose -f production.yml -f docker-compose.yml up
+
+docker-compose -f production.yml -f docker-compose.yml down
 
 > For Testing
 
+1. npm run compose-build-test
+2. npm run compose-run-test
+
+>If you need to run in manually
+
 1. docker-compose -f test.yml -f docker-compose.yml build
 2. docker-compose -f test.yml -f docker-compose.yml up
+
+docker-compose -f test.yml -f docker-compose.yml down
 
 ###Background
 I built this application to emulate a point of sale business application. This application would be similar to a POS system used by servers at a restaurant but available for use on any device with access to the web.
