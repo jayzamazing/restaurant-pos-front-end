@@ -31,7 +31,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "compose-build-prod": "docker-compose -f docker-compose.yml -f production.yml build web",
+    "compose-run-prod": "docker-compose -f docker-compose.yml -f production.yml up web",
+    "compose-build-test": "docker-compose -f docker-compose.yml -f test.yml build web",
+    "compose-run-test": "docker-compose -f docker-compose.yml -f test.yml up web"
   },
   "devDependencies": {
     "enzyme": "^3.9.0",
