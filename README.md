@@ -11,9 +11,15 @@ This project can either be run using the following commands:
 1. npm run compose-build-prod
 2. npm run compose-run-prod
 
+>To bring the container down
+
+ npm run compose-kill-prod
+
 >If you need to run in manually
 1. docker-compose -f production.yml -f docker-compose.yml build
 2. docker-compose -f production.yml -f docker-compose.yml up
+
+>To bring the container down
 
 docker-compose -f production.yml -f docker-compose.yml down
 
@@ -22,10 +28,16 @@ docker-compose -f production.yml -f docker-compose.yml down
 1. npm run compose-build-test
 2. npm run compose-run-test
 
+>To bring the container down
+
+ npm run compose-kill-prod
+
 >If you need to run in manually
 
 1. docker-compose -f test.yml -f docker-compose.yml build
 2. docker-compose -f test.yml -f docker-compose.yml up
+
+>To bring the container down
 
 docker-compose -f test.yml -f docker-compose.yml down
 
